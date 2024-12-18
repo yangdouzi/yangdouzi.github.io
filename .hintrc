@@ -18,6 +18,12 @@
           "-webkit-text-decoration-skip"
         ]
       }
+    ],
+    "axe/keyboard": [
+      "default",
+      {
+        "nested-interactive": "off"
+      }
     ]
   }
 }
