@@ -1,0 +1,54 @@
+.主体区 {
+    padding: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+ 
+.登录框 {
+    width: 350px;
+    height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+ 
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.7);
+}
+ 
+form {
+    height: 100%;
+ 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ 
+h2 {
+    font-size: 40px;
+}
+ 
+span {
+	font-size: 20px;
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+}
+ 
+.提交 {
+    width: 260px;
+    height: 30px;
+ 
+    background: rgba(77,132,226);
+    color: white;
+    border: none;
+}
+ 
+.text {
+    width: 165px;
+    height: 25px;
+    padding-left: 10px;
+ 
+    border-radius: 5px;
+    border: none;
+}

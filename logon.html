@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>注册页面</title>
+    <link rel="stylesheet" type="text/css" href="registerStyle.css" />
+    <script type="text/javascript" src="registerScript.js"></script>
+</head>
+
+<body>
+    <div class="register1">
+        <span class="register1_1">用户注册</span>
+    </div>
+    <div class="register2">
+        <span class="register2_1">请输入用户名：</span>
+        <input type="text" name="rUsername" id="rUsr" class=rUsr_name>
+    </div>
+
+    <div class="register3">
+        <span class="register3_1">请输入密码：</span>
+        <input type="password" name="rPassword1" id="rPwd1" class=rPass_word1>
+    </div>
+
+    <div class="register4">
+        <span class="register4_1">请再次输入密码：</span>
+        <input type="password" name="rPassword2" id="rPwd2" class=rPass_word2>
+    </div>
+
+    <div class="register5">
+        <span class="register5_1">验证码</span>
+        <input type="test" id="rInputCode" class="rInput_code" />
+        <input type="button" id="rCheckCode" class="rCodeJS" value="生成验证码" onclick="createCode()" />
+    </div>
+
+    <div class="register6">
+        <input type="button" id="registerButton" value="注册" onclick="registerValidate()" />
+        <input type="button" value="已注册过" onclick="jump('login.html')" />
+    </div>
+</body>
+
+</html>
