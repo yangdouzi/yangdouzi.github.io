@@ -5,10 +5,8 @@
 >## hello!
 
 >### version
+>v1.0.0
 >
->[ ]v3.5.0 (beta)
->[v]v3.3.0 (this version)
-
 >### about me
 >
 >email:<yangdouzi123@outlook.com>
