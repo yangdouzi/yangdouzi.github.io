@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 150, 255, 0.5);
+            pointer-events: none;
+            width: 20px;
+            height: 20px;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            circle.style.left = `${e.pageX}px`;
+            circle.style.top = `${e.pageY}px`;
+            document.body.appendChild(circle);
+
+            setTimeout(() => {
+                circle.remove();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
