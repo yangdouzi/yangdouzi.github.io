@@ -5,7 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
     <title>欢迎来我的网站</title>
-    
+    <style>
+        body {
+            margin: 0;
+            background-image : url('https://vcg05.cfp.cn/creative/vcg/nowater800/new/VCG211535089739.jpg?x-oss-process=image/format,webp');
+            background-size:100% 100%;
+            background-attachment:fixed;
+            overflow: hidden;
+            font-family: 'Microsoft Yahei', sans-serif;
+        }
+        .circle {
+            position: absolute;
+            border-radius: 80%;
+            background: rgba(223, 3, 3, 0.928);
+            pointer-events: none;
+            width: 20px;
+            height: 20px;
+            transform: translate(-50%, -50%);
+        }
+    </style>
     <link href="/files/css/index.css" rel="stylesheet"/>
     <script src="/files/js/mouse-effect.js" defer></script>
 
@@ -32,5 +50,18 @@
     <!-- <div class="login">
         <a href="logon.html"><span>注册</span></a><a href="login.html"><span>登录</span></a>
     </div> -->
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            circle.style.left = `${e.pageX}px`;
+            circle.style.top = `${e.pageY}px`;
+            document.body.appendChild(circle);
+
+            setTimeout(() => {
+                circle.remove();
+            }, 500);
+        });
+    </script>
 </body>
 </html>

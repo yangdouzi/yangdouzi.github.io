@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>写字机</title>
+</head>
+<body>
+    <h1>写字机</h1>
+    <script>
+        var txt = document.getElementById('txt');
+        var cav = document.getElementById('cav').getContext('2d');
+        var font = ['Arial', 'sans-serif', 'Microsoft Yahei', '黑体', '宋体', '楷体', '仿宋', '微软雅黑', '幼圆', '隶书', '华文行楷', '华文仿宋', '华文楷体', '华文宋体', '华文中宋', '华文新魏', '华文细黑', '华文琥珀', '华文彩云', '华文彩云', '华文琥珀', '华文细黑', '华文新魏', '华文中宋', '华文宋体', '华文楷体', '华文仿宋', '华文行楷', '隶书', '幼圆', '微软雅黑', '仿宋', '楷体', '宋体', '黑体', 'Microsoft Yahei', 'sans-serif', 'Arial'];
+        var style = ['#f00','#ff0','#f0f','rgb(132,50,247)','rgb(147,239,115)']
+        function draw(){
+            cav.clearRect(0,0,800,600);
+            cav.font = 'bold 50px '+font[Math.floor(Math.random()*font.length)];
+            cav.fillStyle = style[Math.floor(Math.random()*style.length)];
+            cav.fillText(txt.value,Math.random()*800,Math.random()*600);
+        }
+</script>
+</body>
+</html>
