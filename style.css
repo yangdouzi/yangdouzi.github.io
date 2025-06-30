@@ -1,0 +1,303 @@
+* {
+    margin: 0; /*消除浏览器默认样式*/
+    padding: 0px;
+    box-sizing: border-box; /*让内部margin不要撑大盒子*/
+}
+
+/*导航栏样式---------------*/
+html, body{
+    height: 100%; /*让页面布满浏览器*/
+    width: 100%;
+    min-width: 1000px; /*设置最小px，防止浏览器页面缩小时导致内容混乱，会生成滑动条*/
+    min-height: 700px;
+    background-image: url(/img/bg.png); /*设置背景*/
+    /*background-repeat: no-repeat; !*取消背景图片平铺*!*/
+    background-size: cover; /*背景铺满浏览器页面*/
+    margin: 0 auto;
+}
+
+
+
+.nav{
+    width: 100%;
+    height: 50px;
+    background-color: gray; /*设置灰色导航栏*/
+    /*通过弹性布局，使文字显示在中间*/
+    display: flex; /*水平方向的居中*/
+    justify-content: left; /*让元素水平方向靠左布局*/
+    align-items: center; /*垂直方向居中*/
+    color: rgba(131, 223, 3, 0.93); /*设置我的博客系统颜色为白色*/
+}
+
+.nav .space{
+    width: 70%; /*让主题和右边三个链接分开*/
+}
+
+
+
+/* 设置logo图片大小 */
+.nav img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /*变成圆形*/
+    /* 设置上下左右边距，让logo图标显示在中间 */
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 6px;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none; /*取消超链接下划线*/
+    margin-left: 8px; /*设置内边距，让选项分开*/
+    margin-right: 30px;
+}
+
+
+/*个人信息和博客列表样式--------------*/
+/* 1，设置总体布局*/
+.container {
+    display: flex;
+    justify-content: space-between; /*让元素水平方向保持一定距离*/
+    align-items: center;
+    margin: 0 auto; /*水平方向居中，上下是0，左右是auto*/
+    height: calc(100% - 50px);
+    width: 100%;
+}
+
+.container .container-left{
+    height: 100%;
+    width: 30%; /*个人信息在左边比较窄，所以占据30%的像素即可*/
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.container .container-right{
+    height: 100%;
+    width: 70%;
+    overflow: auto; /*如果内容溢出页面就加上滚动条*/
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 2，设置个人信息卡片样式*/
+.card{
+    width: 60%; /*原来的card是把左边占完了的，但是实际效果中左边有一点留白，所以我们让card只占据60%的空间*/
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.5); /*最后一个数字表示透明度 */
+    margin-left: 130px; /*设置左边距，让card靠右显示*/
+    margin-right: 10px;
+    border-radius: 15px; /*设置圆角*/
+    margin-top: 10px;
+}
+
+
+
+.card img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; /*让图片在浏览器的全屏和小屏环境下都居中显示*/
+    margin-top: 20px;
+}
+
+
+.card h3{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.card a{
+    display: block; /*把a链接变成一个块级元素，便于控制*/
+    text-align: center;
+    color:gray;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card .counter{
+    display: flex; /*进入弹性布局*/
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card p{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* 3，设置博客列表样式*/
+.blog {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px; /*设置圆角*/
+    margin-top: 20px;
+}
+
+.blog .title{
+    font-size:20px; /*设置博客标题大小得粗细*/
+    font-weight: 900;
+    text-align: center; /*让标题居中*/
+    padding-top: 20px; /*设置上边距*/
+}
+
+.blog .date{
+    color: green;
+    padding-bottom: 10px; /*设置日期下边距*/
+    padding-top: 10px;
+    text-align: center; /*让日期也居中*/
+}
+
+.blog .desc{
+    text-indent: 2em; /*设置缩进*/
+    line-height: 20px; /*设置行高*/
+    margin-top: 20px; /*设置上边距*/
+}
+
+.blog .detail{
+    display: block; /*把超链接变成块级元素，方便操作*/
+    color: black;
+    text-align: center; /*使超链接居中*/
+    width: 140px;
+    height: 40px;
+    margin: 10px auto 0px auto; /*上边距10px，右和左是auto，下边距是0px*/
+    border: 2px solid black; /*设置边框为2px，使用实线，颜色是黑色*/
+    line-height: 40px; /*让边框里的文字显示在距下位置，去掉这一行则显示在上面*/
+}
+
+.blog .detail:active{
+    color:blue; /*使用伪类选择器给链接加上一些效果*/
+}
+
+
+.login-container {
+    height: calc(100% - 50px);
+    width: 100%;
+    display: flex; /*进入弹性布局*/
+    justify-content: center; /*水平方向居中*/
+    align-items: center; /*垂直方向居中*/
+}
+
+.login-dialog{
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+h3{
+    text-align: center; /*直接让标题居中*/
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.row {
+    display: flex; /*进入弹性布局，好让元素在水平和垂直方向都居中*/
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.row span{
+    font-size: 20px; /*设置字体大小*/
+    width: 100px
+}
+
+.row input {
+    height: 40px;
+    width: 250px;
+    border-radius: 9px;
+    font-size: 20px; /*设置输入时的字体大小*/
+    border: none; /*去掉边框*/
+}
+
+.row button{
+    background-color: rgb(2, 159, 2);
+    width: 150px;
+    height: 40px;
+    border-radius: 9px;
+    font-size: 20px;
+}
+
+
+.slink {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.slink h1{
+    text-align: center;
+    margin-top: 20px;
+    color: #4e3d3d;
+}
+
+.slink img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 20px 0 0;
+}
+
+.slink a{
+    color: dodgerblue;
+    text-decoration: none; /*取消超链接下划线*/
+    margin: 0;
+}
+
+.double-column-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+}
+
+/* 标题居中样式 */
+.text-center {
+    text-align: center;
+}
+
+.app {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px; /*设置圆角*/
+    margin-top: 20px;
+}
+
+.app .title {
+    font-size:20px; /*设置博客标题大小得粗细*/
+    font-weight: 900;
+    text-align: center; /*让标题居中*/
+    padding-top: 20px; /*设置上边距*/
+}
+
+.app .version {
+    color: green;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+.app .desc {
+    text-indent: 2em; /*设置缩进*/
+    line-height: 20px; /*设置行高*/
+}
+
+.app a {
+    display: block; /*把a链接变成一个块级元素，便于控制*/
+    text-align: center;
+    color:cornflowerblue;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
